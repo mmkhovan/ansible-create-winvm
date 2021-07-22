@@ -1,4 +1,4 @@
-Azure basic create VM Role
+Azure create VM Role
 =========
 
 This role automates creating a Windows Server VM in AzureCloud, and afterwards install a Notepad++ with specific version.
