@@ -18,8 +18,9 @@ Role Variables
 --------------
 
 The role uses next variables:
-    - password (Password for user the technical user(azureuser) of your VM)
-    - publicipaddress (Creates automatically on step of WinRM of ansible tasks)
+  - password (Password for user the technical user(azureuser) of your VM. Enter in with --extra-vars="password=yourpassword" while executing ansible playbook)
+  - publicipaddress (Creates automatically on step of WinRM of ansible tasks)
+  
 
 Dependencies
 ------------
@@ -30,12 +31,9 @@ Main dependencies are:
     
 Example Playbook
 ----------------
+Playbook described in file depl.yml. You need to copy this role to your roles folder.(~/roles). And copy depl.yml to your home folder(~/depl.yml)
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+  
 
 License
 -------
@@ -45,4 +43,4 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Mikhail Khovanskiy, Moscow 02:16 Friday, 23.07.2021
