@@ -25,8 +25,8 @@ Dependencies
 ------------
 
 Main dependencies are:
-    - WinRM of python(pip install "pywinrm>=0.3.0")
-    -
+  - WinRM of python(pip install "pywinrm>=0.3.0")
+  - Chocolatey Ansible module (ansible-galaxy collection install chocolatey.chocolatey)
     
 Example Playbook
 ----------------
