@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  roles:
+    - role: 'ansible-create-vm'
+
+
+- name: InstallNotepad
+  hosts: windows
+  vars:
+    ansible_user: azureuser
+    ansible_password: "{{ password }}"
+    ansible_port: 5986
+    ansible_connection: winrm
+    ansible_winrm_server_cert_validation: ignore
+    #connection: local
+    #ip: "{{ lookup('env','VM_IP') }}"
+  tasks:
+    - name: Install notepadplusplus version 8.1.2
+      win_chocolatey:
+        name: notepadplusplus
+        version: '8.1.2'
+        state: latest
