@@ -12,11 +12,9 @@
     ansible_port: 5986
     ansible_connection: winrm
     ansible_winrm_server_cert_validation: ignore
-    #connection: local
-    #ip: "{{ lookup('env','VM_IP') }}"
   tasks:
-    - name: Install notepadplusplus version 8.1.2
+    - name: Install notepadplusplus
       win_chocolatey:
         name: notepadplusplus
-        version: '8.1.2'
+        version: "{{ np_ver }}"
         state: latest
