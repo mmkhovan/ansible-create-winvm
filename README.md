@@ -21,6 +21,7 @@ Role Variables
 The role uses next variables:
   - password (Password for user the technical user(azureuser) of your VM. Enter in with --extra-vars="password=yourpassword" while executing ansible playbook)
   - publicipaddress (Creates automatically on step of WinRM of ansible tasks)
+  - np_ver (Version of notepad++ you need to install)
   
 Dependencies
 ------------
@@ -35,7 +36,7 @@ Playbook described in file depl.yml.
 You need to copy this role to your roles folder.($HOME/roles). 
 And copy depl.yml to your home folder($HOME/depl.yml)
 Run playbook with:
- - ansible-playbook --extra-vars "password=<yourpassword>" depl.yml
+ - ansible-playbook --extra-vars "password=yourpassword np_ver=8.1.2" depl.yml
   
 
 License
