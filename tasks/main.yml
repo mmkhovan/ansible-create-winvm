@@ -1,0 +1,22 @@
+---
+# tasks file for win-vm
+- name: AzureWindowsVM
+  include_tasks: azure_windows_vm.yml
+
+- name: VNetTask
+  include_tasks: vnet.yml
+
+- name: PublicIPTask
+  include_tasks: public_net.yml
+
+- name: SecurityTask
+  include_tasks: security.yml
+
+- name: CreateVMTask
+  include_tasks: create_vm.yml
+
+- name: WinRMTask
+  include_tasks: win_rm_enable.yml
+
+#- name: notepad
+#  include_tasks: notepad.yml

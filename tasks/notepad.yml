@@ -1,0 +1,5 @@
+- name: Install notepadplusplus version 8.1.2
+  win_chocolatey:
+    name: notepadplusplus
+    version: '8.1.2'
+    state: latest

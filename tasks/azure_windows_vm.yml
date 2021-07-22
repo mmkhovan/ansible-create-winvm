@@ -1,0 +1,10 @@
+---
+  #- name: Cr
+   #hosts: localhost
+  #  connection: local
+   #tasks:
+
+  - name: Create resource group
+    azure_rm_resourcegroup:
+      name: myResourceGroup
+      location: eastus
