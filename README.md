@@ -13,7 +13,7 @@ Before run this role with ansible-playbook you will have to make some basics pre
   - Run is command in your console:    "az ad sp create-for-rbac --name ansible"
   - Then you need assign a role to the Azure service principal: "az role assignment create --assignee <appID> --role Contributor"
   - Run: "az account list".  to see all your accounts
-  - Run: "az account set --subscription '<yourAppId>'"
+  - Run: "az account set --subscription 'yourAppId'" to set your appId
 
 Role Variables
 --------------
