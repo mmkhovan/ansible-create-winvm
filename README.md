@@ -1,23 +1,33 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This role automates creating a Windows Server VM in AzureCloud, and afterwards install a Notepad++ with specific version.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Before run this role with ansible-playbook you will have to make some basics presets in AzureCloud.
+1.First of all you need to create account in Azure.
+2.Then you need to set up Azure service principal:
+  - Login:  az login (will redirect to your browser, and after sucsessfull authentication console will print out creds of your account including appId that yoy will      use in the next steps)
+  - Run is command in your console:    az ad sp create-for-rbac --name ansible
+  - Then you need assign a role to the Azure service principal: az role assignment create --assignee <appID> --role Contributor
+  - If you already installed ansible, you may need download the WinRM python requirement:  pip install "pywinrm>=0.3.0"
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+The role uses next variables:
+    - password (Password for user the technical user(azureuser) of your VM)
+    - publicipaddress (Creates automatically on step of WinRM of ansible tasks)
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
+Main dependencies are:
+    - WinRM of python(pip install "pywinrm>=0.3.0")
+    -
+    
 Example Playbook
 ----------------
 
