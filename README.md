@@ -31,9 +31,11 @@ Main dependencies are:
     
 Example Playbook
 ----------------
-Playbook described in file depl.yml. You need to copy this role to your roles folder.($HOME/roles). And copy depl.yml to your home folder($HOME/depl.yml)
+Playbook described in file depl.yml. 
+You need to copy this role to your roles folder.($HOME/roles). 
+And copy depl.yml to your home folder($HOME/depl.yml)
 Run playbook with:
-  ansible-playbook --extra-vars "password=Ielt%arg12b" -i depl.yml
+ - ansible-playbook --extra-vars "password=<yourpassword>" -i depl.yml
   
 
 License
